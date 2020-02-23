@@ -1,0 +1,242 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200223095406
+Nombre de usuario: LAPTOP-VV897M67\Juan Manuel López C
+Usuario RunAs: LAPTOP-VV897M67\Juan Manuel López C
+Nombre de la configuración: 
+Máquina: LAPTOP-VV897M67 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 15240
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Juan Manuel López C\Documents\PowerShell_transcript.LAPTOP-VV897M67.UxoSFOGJ.20200223095406.txt
+PS C:\Windows\system32> New-Item note.txt
+
+
+    Directorio: C:\Windows\system32
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     23/02/2020  9:54 a. m.              0 note.txt
+
+
+PS C:\Windows\system32> New-Item note1.txt
+
+
+    Directorio: C:\Windows\system32
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     23/02/2020  9:55 a. m.              0 note1.txt
+
+
+PS C:\Windows\system32> diff note.txt note1.txt
+
+InputObject SideIndicator
+----------- -------------
+note1.txt   =>
+note.txt    <=
+
+
+PS C:\Windows\system32> diff (Get-Content note.txt) (Get-Content note1.txt)
+PS C:\Windows\system32> ErrorTerminación(Compare-Object): "No se puede enlazar el argumento al parámetro 'ReferenceObject' porque es nulo."
+Compare-Object : No se puede enlazar el argumento al parámetro 'ReferenceObject' porque es nulo.
+En línea: 1 Carácter: 6
++ diff (Get-Content note.txt) (Get-Content note1.txt)
++      ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Compare-Object], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.CompareObjectCommand
+Compare-Object : No se puede enlazar el argumento al parámetro 'ReferenceObject' porque es nulo.
+En línea: 1 Carácter: 6
++ diff (Get-Content note.txt) (Get-Content note1.txt)
++      ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Compare-Object], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.CompareObjectCommand
+
+PS C:\Windows\system32> get-service | export-csv servicios.csv | out-file
+>> ErrorTerminación(Out-File): "No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo."
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del 
+argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\Windows\system32> get-service | export-csv servicios.csv
+PS C:\Windows\system32> get-service | export-csv serviciosprueba.csv -Delimiter ';'
+PS C:\Windows\system32> get-service | export-csv serviciosprueba.csv -Delimiter ';' -Confirm
+Confirmar
+¿Está seguro de que desea realizar esta acción?
+Se está realizando la operación "Export-Csv" en el destino "serviciosprueba.csv".
+&Sí  Sí a t&odo  &No  No a &todo  S&uspender
+S
+PS C:\Windows\system32> Get-Process |export-csv servicios.csv -NoClobber
+>> ErrorTerminación(Export-Csv): "El archivo 'C:\Windows\system32\servicios.csv' ya existe."
+export-csv : El archivo 'C:\Windows\system32\servicios.csv' ya existe.
+En línea: 1 Carácter: 14
++ Get-Process |export-csv servicios.csv -NoClobber
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Windows\system32\servicios.csv:String) [Export-Csv], IOException
+    + FullyQualifiedErrorId : NoClobber,Microsoft.PowerShell.Commands.ExportCsvCommand
+export-csv : El archivo 'C:\Windows\system32\servicios.csv' ya existe.
+En línea: 1 Carácter: 14
++ Get-Process |export-csv servicios.csv -NoClobber
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Windows\system32\servicios.csv:String) [Export-Csv], IOException
+    + FullyQualifiedErrorId : NoClobber,Microsoft.PowerShell.Commands.ExportCsvCommand
+
+PS C:\Windows\system32> Get-Process |Export-Csv servicios.csv -Confirm
+Confirmar
+¿Está seguro de que desea realizar esta acción?
+Se está realizando la operación "Export-Csv" en el destino "servicios.csv".
+&Sí  Sí a t&odo  &No  No a &todo  S&uspender
+S
+PS C:\Windows\system32> Get-Process |Export-Csv servicios.csv -UseCulture
+PS C:\Windows\system32> help *random*
+
+NOMBRE
+    Get-Random
+
+SINTAXIS
+    Get-Random [[-Maximum] <Object>]  [<CommonParameters>]
+
+    Get-Random [-InputObject] <Object[]>  [<CommonParameters>]
+
+
+ALIAS
+    Ninguno
+
+
+NOTAS
+    Get-Help no encuentra los archivos de Ayuda para este cmdlet en el equipo. Mostrará solo una parte de la Ayuda.
+        -- Para descargar e instalar los archivos de Ayuda para el módulo que incluye este cmdlet, use Update-Help.
+        -- Para ver en línea el tema de Ayuda de este cmdlet, escriba "Get-Help Get-Random -Online" o
+           vaya a https://go.microsoft.com/fwlink/?LinkID=113446.
+
+
+
+PS C:\Windows\system32> Get-Random
+494099714
+PS C:\Windows\system32> help *date*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Update-Help                       Cmdlet    Microsoft.PowerShell.Core ...
+Get-Date                          Cmdlet    Microsoft.PowerShell.U... ...
+Set-Date                          Cmdlet    Microsoft.PowerShell.U... ...
+Update-FormatData                 Cmdlet    Microsoft.PowerShell.U... ...
+Update-List                       Cmdlet    Microsoft.PowerShell.U... ...
+Update-TypeData                   Cmdlet    Microsoft.PowerShell.U... ...
+Update-Script                     Function  PowerShellGet             ...
+Update-ModuleManifest             Function  PowerShellGet             ...
+Update-Module                     Function  PowerShellGet             ...
+Update-ScriptFileInfo             Function  PowerShellGet             ...
+Update-MpSignature                Function  Defender                  ...
+Update-WIMBootEntry               Cmdlet    Dism                      Update-WIMBootEntry...
+Update-AutologgerConfig           Function  EventTracingManagement    ...
+Update-EtwTraceSession            Function  EventTracingManagement    ...
+Update-IscsiTarget                Function  iSCSI                     ...
+Update-IscsiTargetPortal          Function  iSCSI                     ...
+Update-NetIPsecRule               Function  NetSecurity               ...
+Update-DscConfiguration           Function  PSDesiredStateConfigur... ...
+Update-SmbMultichannelConnection  Function  SmbShare                  ...
+Update-Disk                       Function  Storage                   ...
+Update-StorageFirmware            Function  Storage                   ...
+Update-StoragePool                Function  Storage                   ...
+Update-StorageProviderCache       Function  Storage                   ...
+Update-HostStorageCache           Function  Storage                   ...
+Get-WindowsUpdateLog              Function  WindowsUpdate             ...
+Install-WUUpdates                 Function  WindowsUpdateProvider     ...
+Get-WULastScanSuccessDate         Function  WindowsUpdateProvider     ...
+Get-WULastInstallationDate        Function  WindowsUpdateProvider     ...
+
+
+PS C:\Windows\system32> Get-Date
+
+domingo, 23 de febrero de 2020 10:06:28 a. m.
+
+
+PS C:\Windows\system32> Get-Date | Select-Object DayOfWeek
+
+DayOfWeek
+---------
+   Sunday
+
+
+PS C:\Windows\system32> help *hotfix*
+
+NOMBRE
+    Get-HotFix
+
+SINTAXIS
+    Get-HotFix [[-Id] <string[]>]  [<CommonParameters>]
+
+    Get-HotFix  [<CommonParameters>]
+
+
+ALIAS
+    Ninguno
+
+
+NOTAS
+    Get-Help no encuentra los archivos de Ayuda para este cmdlet en el equipo. Mostrará solo una parte de la Ayuda.
+        -- Para descargar e instalar los archivos de Ayuda para el módulo que incluye este cmdlet, use Update-Help.
+        -- Para ver en línea el tema de Ayuda de este cmdlet, escriba "Get-Help Get-HotFix -Online" o
+           vaya a https://go.microsoft.com/fwlink/?LinkID=135217.
+
+
+
+PS C:\Windows\system32> Get-HotFix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+LAPTOP-VV8... Update           KB4534131     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Update           KB4462930     NT AUTHORITY\SYSTEM  10/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Update           KB4465065     NT AUTHORITY\SYSTEM  10/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Update           KB4486153     NT AUTHORITY\SYSTEM  10/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Security Update  KB4516115     NT AUTHORITY\SYSTEM  10/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Security Update  KB4523204     NT AUTHORITY\SYSTEM  10/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-VV8... Security Update  KB4532691     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+
+
+PS C:\Windows\system32> Get-HotFix | Sort-Object InstalledOn | Select-Object InstalledOn, InstalledBy, HotFixId
+
+InstalledOn               InstalledBy         HotFixId
+-----------               -----------         --------
+10/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4462930
+10/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4465065
+10/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4486153
+10/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4516115
+10/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4523204
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4534131
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524244
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4537759
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532691
+
+
+PS C:\Windows\system32> Get-HotFix | Sort-Object Description | Select-Object Description, HotFixId, InstalledOn | ConvertTo-Html | Out-File so.html
+PS C:\Windows\system32> Get-EventLog system -Newest 50 | Sort-Object TimeGenerated, Index | Select-Object Index, TimeGenerated, Source | Out-File logs.txt
+PS C:\Windows\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200223101116
+**********************
