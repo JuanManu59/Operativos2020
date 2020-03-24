@@ -1,0 +1,457 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200323190623
+Nombre de usuario: LAPTOP-VV897M67\Juan Manuel López C
+Usuario RunAs: LAPTOP-VV897M67\Juan Manuel López C
+Nombre de la configuración: 
+Máquina: LAPTOP-VV897M67 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 19344
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Juan Manuel López C\Documents\PowerShell_transcript.LAPTOP-VV897M67.a55O7uoU.20200323190623.txt
+PS C:\Windows\system32> Get-WmiObject Win32_NetworkAdapterConfiguration | Get-Member
+
+
+   TypeName:
+System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapterConfiguration
+
+Name                         MemberType    Definition
+----                         ----------    ----------
+PSComputerName               AliasProperty PSComputerName = __SERVER
+DisableIPSec                 Method        System.Management.ManagementBaseO...
+EnableDHCP                   Method        System.Management.ManagementBaseO...
+EnableIPSec                  Method        System.Management.ManagementBaseO...
+EnableStatic                 Method        System.Management.ManagementBaseO...
+ReleaseDHCPLease             Method        System.Management.ManagementBaseO...
+RenewDHCPLease               Method        System.Management.ManagementBaseO...
+SetDNSDomain                 Method        System.Management.ManagementBaseO...
+SetDNSServerSearchOrder      Method        System.Management.ManagementBaseO...
+SetDynamicDNSRegistration    Method        System.Management.ManagementBaseO...
+SetGateways                  Method        System.Management.ManagementBaseO...
+SetIPConnectionMetric        Method        System.Management.ManagementBaseO...
+SetIPXFrameTypeNetworkPairs  Method        System.Management.ManagementBaseO...
+SetTcpipNetbios              Method        System.Management.ManagementBaseO...
+SetWINSServer                Method        System.Management.ManagementBaseO...
+ArpAlwaysSourceRoute         Property      bool ArpAlwaysSourceRoute {get;set;}
+ArpUseEtherSNAP              Property      bool ArpUseEtherSNAP {get;set;}
+Caption                      Property      string Caption {get;set;}
+DatabasePath                 Property      string DatabasePath {get;set;}
+DeadGWDetectEnabled          Property      bool DeadGWDetectEnabled {get;set;}
+DefaultIPGateway             Property      string[] DefaultIPGateway {get;set;}
+DefaultTOS                   Property      byte DefaultTOS {get;set;}
+DefaultTTL                   Property      byte DefaultTTL {get;set;}
+Description                  Property      string Description {get;set;}
+DHCPEnabled                  Property      bool DHCPEnabled {get;set;}
+DHCPLeaseExpires             Property      string DHCPLeaseExpires {get;set;}
+DHCPLeaseObtained            Property      string DHCPLeaseObtained {get;set;}
+DHCPServer                   Property      string DHCPServer {get;set;}
+DNSDomain                    Property      string DNSDomain {get;set;}
+DNSDomainSuffixSearchOrder   Property      string[] DNSDomainSuffixSearchOrd...
+DNSEnabledForWINSResolution  Property      bool DNSEnabledForWINSResolution ...
+DNSHostName                  Property      string DNSHostName {get;set;}
+DNSServerSearchOrder         Property      string[] DNSServerSearchOrder {ge...
+DomainDNSRegistrationEnabled Property      bool DomainDNSRegistrationEnabled...
+ForwardBufferMemory          Property      uint32 ForwardBufferMemory {get;s...
+FullDNSRegistrationEnabled   Property      bool FullDNSRegistrationEnabled {...
+GatewayCostMetric            Property      uint16[] GatewayCostMetric {get;s...
+IGMPLevel                    Property      byte IGMPLevel {get;set;}
+Index                        Property      uint32 Index {get;set;}
+InterfaceIndex               Property      uint32 InterfaceIndex {get;set;}
+IPAddress                    Property      string[] IPAddress {get;set;}
+IPConnectionMetric           Property      uint32 IPConnectionMetric {get;set;}
+IPEnabled                    Property      bool IPEnabled {get;set;}
+IPFilterSecurityEnabled      Property      bool IPFilterSecurityEnabled {get...
+IPPortSecurityEnabled        Property      bool IPPortSecurityEnabled {get;s...
+IPSecPermitIPProtocols       Property      string[] IPSecPermitIPProtocols {...
+IPSecPermitTCPPorts          Property      string[] IPSecPermitTCPPorts {get...
+IPSecPermitUDPPorts          Property      string[] IPSecPermitUDPPorts {get...
+IPSubnet                     Property      string[] IPSubnet {get;set;}
+IPUseZeroBroadcast           Property      bool IPUseZeroBroadcast {get;set;}
+IPXAddress                   Property      string IPXAddress {get;set;}
+IPXEnabled                   Property      bool IPXEnabled {get;set;}
+IPXFrameType                 Property      uint32[] IPXFrameType {get;set;}
+IPXMediaType                 Property      uint32 IPXMediaType {get;set;}
+IPXNetworkNumber             Property      string[] IPXNetworkNumber {get;set;}
+IPXVirtualNetNumber          Property      string IPXVirtualNetNumber {get;s...
+KeepAliveInterval            Property      uint32 KeepAliveInterval {get;set;}
+KeepAliveTime                Property      uint32 KeepAliveTime {get;set;}
+MACAddress                   Property      string MACAddress {get;set;}
+MTU                          Property      uint32 MTU {get;set;}
+NumForwardPackets            Property      uint32 NumForwardPackets {get;set;}
+PMTUBHDetectEnabled          Property      bool PMTUBHDetectEnabled {get;set;}
+PMTUDiscoveryEnabled         Property      bool PMTUDiscoveryEnabled {get;set;}
+ServiceName                  Property      string ServiceName {get;set;}
+SettingID                    Property      string SettingID {get;set;}
+TcpipNetbiosOptions          Property      uint32 TcpipNetbiosOptions {get;s...
+TcpMaxConnectRetransmissions Property      uint32 TcpMaxConnectRetransmissio...
+TcpMaxDataRetransmissions    Property      uint32 TcpMaxDataRetransmissions ...
+TcpNumConnections            Property      uint32 TcpNumConnections {get;set;}
+TcpUseRFC1122UrgentPointer   Property      bool TcpUseRFC1122UrgentPointer {...
+TcpWindowSize                Property      uint16 TcpWindowSize {get;set;}
+WINSEnableLMHostsLookup      Property      bool WINSEnableLMHostsLookup {get...
+WINSHostLookupFile           Property      string WINSHostLookupFile {get;set;}
+WINSPrimaryServer            Property      string WINSPrimaryServer {get;set;}
+WINSScopeID                  Property      string WINSScopeID {get;set;}
+WINSSecondaryServer          Property      string WINSSecondaryServer {get;s...
+__CLASS                      Property      string __CLASS {get;set;}
+__DERIVATION                 Property      string[] __DERIVATION {get;set;}
+__DYNASTY                    Property      string __DYNASTY {get;set;}
+__GENUS                      Property      int __GENUS {get;set;}
+__NAMESPACE                  Property      string __NAMESPACE {get;set;}
+__PATH                       Property      string __PATH {get;set;}
+__PROPERTY_COUNT             Property      int __PROPERTY_COUNT {get;set;}
+__RELPATH                    Property      string __RELPATH {get;set;}
+__SERVER                     Property      string __SERVER {get;set;}
+__SUPERCLASS                 Property      string __SUPERCLASS {get;set;}
+DHCP                         PropertySet   DHCP {Description, DHCPEnabled, D...
+DNS                          PropertySet   DNS {Description, DNSDomain, DNSD...
+IP                           PropertySet   IP {Description, Index, IPAddress...
+PSStatus                     PropertySet   PSStatus {DHCPLeaseExpires, Index...
+WINS                         PropertySet   WINS {Description, Index, WINSEna...
+ConvertFromDateTime          ScriptMethod  System.Object ConvertFromDateTime();
+ConvertToDateTime            ScriptMethod  System.Object ConvertToDateTime();
+
+
+PS C:\Windows\system32> Get-WmiObject Win32_QuickFixEngineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+LAPTOP-VV8... Update           KB4534131     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Update           KB4465065     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Update           KB4486153     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Security Update  KB4523204     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Security Update  KB4539571     NT AUTHORITY\SYSTEM  11/03/2020...
+LAPTOP-VV8... Security Update  KB4538461     NT AUTHORITY\SYSTEM  14/03/2020...
+
+
+PS C:\Windows\system32> get-hotfix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+LAPTOP-VV8... Update           KB4534131     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Update           KB4465065     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Update           KB4486153     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Security Update  KB4523204     NT AUTHORITY\SYSTEM  10/02/2020...
+LAPTOP-VV8... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020...
+LAPTOP-VV8... Security Update  KB4539571     NT AUTHORITY\SYSTEM  11/03/2020...
+LAPTOP-VV8... Security Update  KB4538461     NT AUTHORITY\SYSTEM  14/03/2020...
+
+
+PS C:\Windows\system32> Get-WmiObject Win32_Service | Select-Object status, startmode, systemname
+
+status startmode systemname
+------ --------- ----------
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Disabled  LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Manual    LAPTOP-VV897M67
+OK     Auto      LAPTOP-VV897M67
+
+
+PS C:\Windows\system32> Get-CimClass -Namespace root\SecurityCenter2 | where cimclassname -Like '*product*'
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+FirewallProduct                     {}                   {displayName, insta...
+AntiVirusProduct                    {}                   {displayName, insta...
+AntiSpywareProduct                  {}                   {displayName, insta...
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root\SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root\SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
+
+displayName
+-----------
+Norton Security Ultra
+Windows Defender
+
+
+PS C:\Windows\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200323190715
+**********************
